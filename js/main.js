@@ -168,45 +168,83 @@ function performSearch(query) {
     }
 }
 
-// ------------------ 🔹 BOOK DATA ------------------ //
+// ------------------ 🔹 BOOK DATA (ALL BOOKS) ------------------ //
 const booksData = {
-    "The Starlit Guide": {
-        author: "A. Sharma",
-        category: "Novels",
-        rating: 4.7,
-        description: "A captivating journey through mystical realms where love transcends time and space.",
-        tags: ["fiction", "romance", "fantasy"],
-         bookId: "starlit-guide",
-        reviews: [
-            { name: "Nia", text: "Loved the pacing and magical elements!", stars: 5 },
-            { name: "Arjun", text: "Great characters and world-building", stars: 4 },
-            { name: "Maya", text: "Couldn't put it down!", stars: 5 }
-        ]
-    },
-    "Business Tactics": {
-        author: "R. Mehta",
-        category: "Business",
-        rating: 4.6,
-        description: "Proven strategies to excel in competitive markets with modern business tactics.",
-        tags: ["business", "strategy", "management"],
-        bookId: "business-tactics",
-        reviews: [
-            { name: "Kiran", text: "Very practical insights!", stars: 5 },
-            { name: "Anil", text: "Good for beginners in business.", stars: 4 }
-        ]
-    },
-    "Self Mastery": {
-        author: "L. Kaur",
-        category: "Self-Improvement",
-        rating: 4.7,
-        description: "A guide to mastering your inner self and achieving lasting personal growth.",
-        tags: ["self-help", "growth", "mindset"],
-        bookId: "self-mastery", 
-        reviews: [
-            { name: "Reema", text: "Life-changing book!", stars: 5 },
-            { name: "Vikram", text: "Solid advice but a bit repetitive.", stars: 4 }
-        ]
-    }
+  "The Starlit Guide": {
+    author: "A. Sharma",
+    category: "Novels",
+    rating: 4.8,
+    description: "A captivating journey through mystical realms where love transcends time and space.",
+    tags: ["fiction", "romance", "fantasy"],
+    bookId: "starlit-guide",
+    reviews: [
+      { name: "Nia", text: "Loved the pacing and magical elements!", stars: 5 },
+      { name: "Arjun", text: "Great characters and world-building", stars: 4 },
+      { name: "Maya", text: "Couldn't put it down!", stars: 5 }
+    ]
+  },
+  "Business Tactics": {
+    author: "R. Mehta",
+    category: "Business",
+    rating: 4.6,
+    description: "Proven strategies to excel in competitive markets with modern business tactics.",
+    tags: ["business", "strategy", "management"],
+    bookId: "business-tactics",
+    reviews: [
+      { name: "Kiran", text: "Very practical insights!", stars: 5 },
+      { name: "Anil", text: "Good for beginners in business.", stars: 4 }
+    ]
+  },
+  "Self Mastery": {
+    author: "L. Kaur",
+    category: "Self-Improvement",
+    rating: 4.7,
+    description: "A guide to mastering your inner self and achieving lasting personal growth.",
+    tags: ["self-help", "growth", "mindset"],
+    bookId: "self-mastery",
+    reviews: [
+      { name: "Reema", text: "Life-changing book!", stars: 5 },
+      { name: "Vikram", text: "Solid advice but a bit repetitive.", stars: 4 }
+    ]
+  },
+  "Atomic Habits": {
+    author: "James Clear",
+    category: "Inspiration",
+    rating: 4.9,
+    description: "Tiny habits that lead to remarkable results over time, with proven techniques.",
+    tags: ["self-help", "habits", "productivity"],
+    bookId: "atomic-habits",
+    reviews: [
+      { name: "Sofia", text: "Transformative strategies for daily routines.", stars: 5 },
+      { name: "Rohan", text: "Practical and easy to apply.", stars: 5 },
+      { name: "Tina", text: "A must-read for habit building!", stars: 5 }
+    ]
+  },
+  "The Psychology of Money": {
+    author: "Morgan Housel",
+    category: "Finance",
+    rating: 4.8,
+    description: "Insights into human behavior and money, teaching financial wisdom through stories.",
+    tags: ["finance", "investing", "money"],
+    bookId: "psychology-money",
+    reviews: [
+      { name: "Aditya", text: "Makes finance easy to understand.", stars: 5 },
+      { name: "Sneha", text: "Excellent insights into money habits.", stars: 4 }
+    ]
+  },
+  "Harry Potter": {
+    author: "J.K. Rowling",
+    category: "Fantasy",
+    rating: 4.9,
+    description: "A magical journey of friendship, courage, and self-discovery at Hogwarts School.",
+    tags: ["fantasy", "magic", "adventure"],
+    bookId: "harry-potter",
+    reviews: [
+      { name: "Aryan", text: "Classic magical adventure!", stars: 5 },
+      { name: "Priya", text: "Loved the characters and world.", stars: 5 },
+      { name: "Neha", text: "Engaging and imaginative.", stars: 5 }
+    ]
+  }
 };
 
 // Page-specific initialization functions

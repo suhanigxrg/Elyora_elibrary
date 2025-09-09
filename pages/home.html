@@ -34,7 +34,7 @@
         <!-- Book 1 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="../images/Welcome.png" alt="The Starlit Guide">
+            <img src="../imgs/starlit-guide.png" alt="The Starlit Guide">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
               <button class="view-btn" data-title="The Starlit Guide" data-author="A. Sharma">
@@ -52,7 +52,7 @@
         <!-- Book 2 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="../images/Welcome.png" alt="Business Tactics">
+            <img src="../imgs/Screenshot 2025-09-09 171335.png" alt="Business Tactics">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
               <button class="view-btn" data-title="Business Tactics" data-author="R. Mehta">
@@ -70,7 +70,7 @@
         <!-- Book 3 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="../images/book3.jpg" alt="Self Mastery">
+            <img src="../imgs/self-mastery.png" alt="Self Mastery">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
               <button class="view-btn" data-title="Self Mastery" data-author="L. Kaur">
@@ -115,7 +115,7 @@
         <!-- Book 1 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="images/book1.jpg" alt="The Starlit Guide">
+            <img src="../imgs/starlit-guide.png" alt="The Starlit Guide">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
             <!-- For The Starlit Guide -->
@@ -135,7 +135,7 @@
         <!-- Book 2 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="images/book2.jpg" alt="Business Tactics">
+            <img src="../imgs/Screenshot 2025-09-09 171335.png" alt="Business Tactics">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
               <!-- For Business Tactics -->
@@ -154,10 +154,10 @@
         <!-- Book 3 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="images/book3.jpg" alt="Self Mastery">
+            <img src="../imgs/self-mastery.png" alt="Self Mastery">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
-              <<!-- For Self Mastery -->
+              <!-- For Self Mastery -->
 <button class="view-btn" data-title="Self Mastery" data-author="L. Kaur" data-bookid="self-mastery">
   <i class="fa-solid fa-eye"></i> View Book
 </button>
@@ -173,7 +173,7 @@
         <!-- Book 4 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="images/book4.jpg" alt="Atomic Habits">
+            <img src="../imgs/atomic-habits.png" alt="Atomic Habits">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
 <!-- For Atomic Habits -->
@@ -193,7 +193,7 @@
         <!-- Book 5 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="images/book5.jpg" alt="The Psychology of Money">
+            <img src="../imgs/psycology-of-money.png" alt="The Psychology of Money">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
 <button class="view-btn" data-title="The Psychology of Money" data-author="Morgan Housel" data-bookid="psychology-money">
@@ -211,7 +211,7 @@
         <!-- Book 6 -->
         <div class="book-card">
           <div class="book-visual">
-            <img src="../images/book6.jpg" alt="Harry Potter">
+            <img src="../imgs/harry-porter.png" alt="Harry Potter">
             <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
             <div class="hover-ui">
 <button class="view-btn" data-title="Harry Potter" data-author="J.K. Rowling" data-bookid="harry-potter">
@@ -233,7 +233,7 @@
 <div id="bookModal" class="modal">
   <div class="modal-content">
     <!-- Close Button -->
-    <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+    <span class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
 
     <!-- Modal Header: Image + Info -->
     <div class="modal-header">
@@ -261,45 +261,46 @@
           <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
           <button class="download-btn"><i class="fa-solid fa-download"></i></button>
         </div>
-      </div>
-    </div>
 
-    <!-- Reviews Section -->
-    <div class="modal-reviews">
-      <h3>Reviews & Ratings</h3>
-      <div class="ratings-summary">
-        <div class="average-rating">
-          <span id="modal-average-rating">4.7</span>
-          <div class="stars">⭐⭐⭐⭐☆</div>
-          <p id="modal-review-count">(3 reviews)</p>
+        <!-- Reviews Section -->
+        <div class="modal-reviews">
+          <h3>Reviews & Ratings</h3>
+
+          <!-- Review Summary -->
+          <div class="ratings-summary">
+            <div class="summary-left">
+              <div class="average-rating"></div>
+              <span id="modal-average-rating">4.7</span>
+              <div class="stars" id="modal-stars">⭐⭐⭐⭐☆</div>
+              <p id="modal-review-count">3 reviews</p>
+            </div>
+            <div class="summary-right rating-bars">
+              <div class="rating-bar"><span>5★</span><div class="bar"><div id="bar-5"></div></div><span class="count-5">0</span></div>
+              <div class="rating-bar"><span>4★</span><div class="bar"><div id="bar-4"></div></div><span class="count-4">0</span></div>
+              <div class="rating-bar"><span>3★</span><div class="bar"><div id="bar-3"></div></div><span class="count-3">0</span></div>
+              <div class="rating-bar"><span>2★</span><div class="bar"><div id="bar-2"></div></div><span class="count-2">0</span></div>
+              <div class="rating-bar"><span>1★</span><div class="bar"><div id="bar-1"></div></div><span class="count-1">0</span></div>
+            </div>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="review-filters">
+            <span>Filter:</span>
+            <button class="filter-btn active" data-star="all">All</button>
+            <button class="filter-btn" data-star="5">5★</button>
+            <button class="filter-btn" data-star="4">4★</button>
+            <button class="filter-btn" data-star="3">3★</button>
+            <button class="filter-btn" data-star="2">2★</button>
+            <button class="filter-btn" data-star="1">1★</button>
+          </div>
+
+          <!-- Reviews List -->
+          <div class="reviews-list"></div>
         </div>
-        <div class="rating-bars">
-          <div>5★ <div class="bar"><div id="bar-5"></div></div></div>
-          <div>4★ <div class="bar"><div id="bar-4"></div></div></div>
-          <div>3★ <div class="bar"><div id="bar-3"></div></div></div>
-          <div>2★ <div class="bar"><div id="bar-2"></div></div></div>
-          <div>1★ <div class="bar"><div id="bar-1"></div></div></div>
-        </div>
       </div>
-
-      <!-- Filter Buttons -->
-      <div class="review-filters">
-        <span>Filter:</span>
-        <button class="filter-btn active" data-star="all">All</button>
-        <button class="filter-btn" data-star="5">5★</button>
-        <button class="filter-btn" data-star="4">4★</button>
-        <button class="filter-btn" data-star="3">3★</button>
-        <button class="filter-btn" data-star="2">2★</button>
-        <button class="filter-btn" data-star="1">1★</button>
-      </div>
-
-      <!-- Reviews List -->
-      <div class="reviews-list"></div>
     </div>
   </div>
 </div>
-
-
 
 
   <script src="/JS/main.js"></script>
