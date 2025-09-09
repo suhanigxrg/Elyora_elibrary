@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Starlit Guide - Reader</title>
+    <link rel="stylesheet" href="
+    /css/reader.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-navbar">
+        <div class="nav-left">
+            <button class="back-btn" onclick="goBack()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <div class="book-info">
+                <span class="greeting">Happy reading, User</span>
+                <h1 class="book-title">The Starlit Guide</h1>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="font-controls">
+                <button class="font-btn" onclick="decreaseFontSize()">-</button>
+                <span class="font-size" id="fontSizeDisplay">16px</span>
+                <button class="font-btn" onclick="increaseFontSize()">+</button>
+            </div>
+            <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">Dark</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search in book..." class="search-input">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </div>
+        </div>
+        <div class="nav-right">
+            <img src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="The Starlit Guide" class="book-cover-small">
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Sidebar -->
+        <aside class="left-sidebar">
+            <button class="sidebar-btn" onclick="toggleChapters()" title="Chapters">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+            </button>
+            <button class="sidebar-btn" onclick="toggleHighlight()" title="Highlight Text">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 11H1l2-2 2 2"/>
+                    <path d="M22 12l-4-4v3a8 8 0 0 1-8 8c-2.76 0-5.26-1.4-6.71-3.71L3.3 16.3"/>
+                </svg>
+            </button>
+            <button class="sidebar-btn" onclick="openNotesModal()" title="Add Notes">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <polyline points="14,2 14,8 20,8"/>
+                </svg>
+            </button>
+            <button class="sidebar-btn" onclick="toggleBookmarks()" title="Bookmarks">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                </svg>
+            </button>
+            <button class="sidebar-btn" onclick="openSettings()" title="Settings">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/>
+                </svg>
+            </button>
+            <button class="sidebar-btn" onclick="viewNotes()" title="View Notes">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14,2 14,8 20,8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10,9 9,9 8,9"/>
+    </svg>
+</button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <!-- Book Cover -->
+            <div class="book-cover-container">
+                <img src="https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=200&h=300&fit=crop" alt="The Starlit Guide" class="book-cover">
+            </div>
+
+            <!-- Chapter Content -->
+            <div class="chapter-container">
+                <h2 class="chapter-title">Chapter 2</h2>
+                <h3 class="chapter-subtitle">Chapter 2: Ancient Whispers</h3>
+                <div class="chapter-content" id="chapterContent">
+                    <p>The book she found in the lighthouse attic was bound in midnight blue leather, its pages filled with symbols that seemed to shimmer in the candlelight...</p>
+                    <p>As Sarah traced her finger along the ancient text, she felt a strange warmth emanating from the pages. The symbols began to glow with an ethereal light, and whispers of forgotten languages filled the air around her.</p>
+                    <p>She had always been drawn to mysteries, but this was unlike anything she had ever encountered. The lighthouse keeper had warned her about the attic, speaking in hushed tones about things that were better left undisturbed.</p>
+                    <p>But curiosity had always been her weakness, and now she found herself deep in the heart of something far greater than she could have imagined. The book pulsed with energy, as if it were alive, waiting for someone worthy to unlock its secrets.</p>
+                </div>
+
+                <!-- Chapter Navigation -->
+                <div class="chapter-navigation">
+                    <button class="nav-btn prev-btn" onclick="previousChapter()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                        Previous
+                    </button>
+                    <span class="chapter-info">Chapter 2 of 3</span>
+                    <button class="nav-btn next-btn" onclick="nextChapter()">
+                        Next
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 67%"></div>
+                </div>
+                <div class="progress-info">
+                    <span>67% complete</span>
+                    <span>3 chapters</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <!-- Book Information -->
+            <div class="book-details">
+                <h3>The Starlit Guide</h3>
+                <p class="author">A. Sharma</p>
+                <p class="genre">Novels</p>
+                <p class="chapters">3 chapters</p>
+                <div class="rating">
+                    <span class="star">★</span>
+                    <span>4.8</span>
+                </div>
+            </div>
+
+            <!-- Chapter Index (Hidden by default) -->
+            <div class="chapter-index" id="chapterIndex" style="display: none;">
+                <h4>Chapters</h4>
+                <ul class="chapter-list">
+                    <li class="chapter-item" onclick="goToChapter(1)">
+                        <span class="chapter-number">1</span>
+                        <span class="chapter-name">The Beginning</span>
+                    </li>
+                    <li class="chapter-item active" onclick="goToChapter(2)">
+                        <span class="chapter-number">2</span>
+                        <span class="chapter-name">Ancient Whispers</span>
+                    </li>
+                    <li class="chapter-item" onclick="goToChapter(3)">
+                        <span class="chapter-number">3</span>
+                        <span class="chapter-name">The Revelation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Reading Schedule -->
+            <div class="reading-schedule">
+                <div class="schedule-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
+                    <span>Reading Schedule</span>
+                </div>
+                <p class="schedule-desc">Set reading goals and track progress</p>
+                <button class="configure-btn">Configure Schedule</button>
+            </div>
+
+            <!-- Community -->
+            <div class="community-section">
+                <div class="community-header">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span>Community</span>
+                </div>
+                <p class="community-desc">Connect with other readers</p>
+                <button class="join-btn">Join Discussion</button>
+                <p class="comments-count">0 comments on this book</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Notes Modal -->
+    <div class="modal" id="notesModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Note</h3>
+                <button class="close-btn" onclick="closeNotesModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea placeholder="Write your note here..." id="noteText"></textarea>
+                <div class="note-options">
+                    <label>
+                        <input type="checkbox" id="privateNote"> Private note
+                    </label>
+                    <select id="noteColor">
+                        <option value="yellow">Yellow</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="pink">Pink</option>
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="cancel-btn" onclick="closeNotesModal()">Cancel</button>
+                <button class="save-btn" onclick="saveNote()">Save Note</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="/js/reader.js"></script>
+</body>
+</html>

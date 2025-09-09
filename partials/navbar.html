@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav class="navbar">
+    <!-- Logo Section -->
+    <div class="logo">
+        <div class="logo-circle">E</div>
+        <span class="logo-text">ELYORA</span>
+    </div>
+
+    <!-- Middle Section -->
+    <div class="middle-section">
+        <!-- All Dropdown -->
+        <div class="dropdown">
+            <button class="dropdown-btn">
+                All
+                <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="#" onclick="handleMenuClick('All Books')">All Books</a>
+                <a href="#" onclick="handleMenuClick('Fiction')">Fiction</a>
+                <a href="#" onclick="handleMenuClick('Non-Fiction')">Non-Fiction</a>
+                <a href="#" onclick="handleMenuClick('Science')">Science</a>
+                <a href="#" onclick="handleMenuClick('History')">History</a>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box">
+            <input type="text" placeholder="Search books..." class="search-input">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <!-- Theme Toggle -->
+        <button class="theme-btn">
+            <span class="theme-icon">🌙</span>
+        </button>
+
+        <!-- Reader Dropdown -->
+        <div class="dropdown">
+            <button class="dropdown-btn">
+                Reader
+                <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+                <a href="#" onclick="handleMenuClick('My Library')">📚 My Library</a>
+                <a href="#" onclick="handleMenuClick('Bookmarks')">🔖 Bookmarks</a>
+                <a href="#" onclick="handleMenuClick('Settings')">⚙️ Settings</a>
+            </div>
+        </div>
+
+        <!-- User Menu -->
+        <div class="dropdown">
+            <button class="user-btn">
+                👤
+            </button>
+            <div class="dropdown-menu user-dropdown">
+                <div class="user-info">
+                    <div class="user-avatar">J</div>
+                    <div class="user-details">
+                        <div class="user-name">John Doe</div>
+                        <div class="user-email">john@example.com</div>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" onclick="handleMenuClick('Profile')">👤 Profile</a>
+                <a href="#" onclick="handleMenuClick('Settings')">⚙️ Settings</a>
+                <a href="#" class="logout" onclick="handleMenuClick('Sign Out')">🚪 Sign Out</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html>
+

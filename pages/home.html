@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elyora</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  
+</head>
+<body>
+  <!-- 🔹 Welcome Section -->
+  <section class="welcome-section">
+    <h1>Welcome to <span class="brand">ELYORA</span></h1>
+    <p>Your gateway to infinite stories</p>
+    <div class="content-buttons">
+      <button>E-Books</button>
+      <button>Journals</button>
+      <button>Articles</button>
+    </div>
+  </section>
+
+  <!-- 🔹 Recommendations -->
+  <section class="recommendations">
+    <h2>
+      Book Recommendations
+      <div class="heading-arrows">
+        <button class="scroll-left"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="scroll-right"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </h2>
+    <div class="scroll-wrapper">
+      <div class="book-card-container">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="../images/Welcome.png" alt="The Starlit Guide">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+              <button class="view-btn" data-title="The Starlit Guide" data-author="A. Sharma">
+                <i class="fa-solid fa-eye"></i> View Book
+              </button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>The Starlit Guide</h3>
+          <p>A. Sharma</p>
+          <span class="tag">Novels</span>
+          <span class="rating">⭐ 4.8</span>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="../images/Welcome.png" alt="Business Tactics">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+              <button class="view-btn" data-title="Business Tactics" data-author="R. Mehta">
+                <i class="fa-solid fa-eye"></i> View Book
+              </button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Business Tactics</h3>
+          <p>R. Mehta</p>
+          <span class="tag">Business</span>
+          <span class="rating">⭐ 4.6</span>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="../images/book3.jpg" alt="Self Mastery">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+              <button class="view-btn" data-title="Self Mastery" data-author="L. Kaur">
+                <i class="fa-solid fa-eye"></i> View Book
+              </button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Self Mastery</h3>
+          <p>L. Kaur</p>
+          <span class="tag">Self-Improvement</span>
+          <span class="rating">⭐ 4.7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Categories -->
+  <section class="categories">
+    <h2>Books by Category</h2>
+    <div class="category-card-container">
+      <div class="category-card">Comics</div>
+      <div class="category-card">Novels</div>
+      <div class="category-card">Study Material</div>
+      <div class="category-card">Inspiration</div>
+      <div class="category-card">Business</div>
+      <div class="category-card">Self Improvement</div>
+    </div>
+  </section>
+
+  <!-- 🔹 All Books -->
+  <section class="all-books">
+    <h2>
+      All Books
+      <div class="heading-arrows">
+        <button class="scroll-left"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="scroll-right"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </h2>
+    <div class="scroll-wrapper">
+      <div class="all-books-container">
+        <!-- Book 1 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="images/book1.jpg" alt="The Starlit Guide">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+            <!-- For The Starlit Guide -->
+            <button class="view-btn" data-title="The Starlit Guide" data-author="A. Sharma" data-bookid="starlit-guide">
+              <i class="fa-solid fa-eye"></i> View Book
+            </button>
+
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>The Starlit Guide</h3>
+          <p>A. Sharma</p>
+          <span class="tag">Novels</span>
+          <span class="rating">⭐ 4.8</span>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="images/book2.jpg" alt="Business Tactics">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+              <!-- For Business Tactics -->
+              <button class="view-btn" data-title="Business Tactics" data-author="R. Mehta" data-bookid="business-tactics">
+                <i class="fa-solid fa-eye"></i> View Book
+              </button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Business Tactics</h3>
+          <p>R. Mehta</p>
+          <span class="tag">Business</span>
+          <span class="rating">⭐ 4.6</span>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="images/book3.jpg" alt="Self Mastery">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+              <<!-- For Self Mastery -->
+<button class="view-btn" data-title="Self Mastery" data-author="L. Kaur" data-bookid="self-mastery">
+  <i class="fa-solid fa-eye"></i> View Book
+</button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Self Mastery</h3>
+          <p>L. Kaur</p>
+          <span class="tag">Self-Improvement</span>
+          <span class="rating">⭐ 4.7</span>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="images/book4.jpg" alt="Atomic Habits">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+<!-- For Atomic Habits -->
+<button class="view-btn" data-title="Atomic Habits" data-author="James Clear" data-bookid="atomic-habits">
+  <i class="fa-solid fa-eye"></i> View Book
+</button>
+
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Atomic Habits</h3>
+          <p>James Clear</p>
+          <span class="tag">Inspiration</span>
+          <span class="rating">⭐ 4.9</span>
+        </div>
+
+        <!-- Book 5 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="images/book5.jpg" alt="The Psychology of Money">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+<button class="view-btn" data-title="The Psychology of Money" data-author="Morgan Housel" data-bookid="psychology-money">
+  <i class="fa-solid fa-eye"></i> View Book
+</button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>The Psychology of Money</h3>
+          <p>Morgan Housel</p>
+          <span class="tag">Finance</span>
+          <span class="rating">⭐ 4.8</span>
+        </div>
+
+        <!-- Book 6 -->
+        <div class="book-card">
+          <div class="book-visual">
+            <img src="../images/book6.jpg" alt="Harry Potter">
+            <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+            <div class="hover-ui">
+<button class="view-btn" data-title="Harry Potter" data-author="J.K. Rowling" data-bookid="harry-potter">
+  <i class="fa-solid fa-eye"></i> View Book
+</button>
+              <button class="icon-btn download-btn"><i class="fa-solid fa-download"></i></button>
+            </div>
+          </div>
+          <h3>Harry Potter</h3>
+          <p>J.K. Rowling</p>
+          <span class="tag">Fantasy</span>
+          <span class="rating">⭐ 4.9</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Book Modal -->
+<div id="bookModal" class="modal">
+  <div class="modal-content">
+    <!-- Close Button -->
+    <span class="close-btn"><i class="fa-solid fa-xmark"></i></span>
+
+    <!-- Modal Header: Image + Info -->
+    <div class="modal-header">
+      <!-- Left: Bigger Book Image -->
+      <div class="modal-image">
+        <img id="modal-book-img" alt="Book Cover">
+      </div>
+
+      <!-- Right: Book Info -->
+      <div class="modal-info">
+        <h2 id="modal-title">Book Title</h2>
+        <p id="modal-author">Author Name</p>
+        <span id="modal-category" class="category-tag">Category</span>
+
+        <p id="modal-description">
+          Book description goes here...
+        </p>
+
+        <!-- Tags -->
+        <div class="modal-tags"></div>
+
+        <!-- Buttons Row -->
+        <div class="modal-actions">
+          <button class="start-btn"><i class="fa-solid fa-play"></i> Start Reading</button>
+          <button class="fav-btn"><i class="fa-solid fa-heart"></i></button>
+          <button class="download-btn"><i class="fa-solid fa-download"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="modal-reviews">
+      <h3>Reviews & Ratings</h3>
+      <div class="ratings-summary">
+        <div class="average-rating">
+          <span id="modal-average-rating">4.7</span>
+          <div class="stars">⭐⭐⭐⭐☆</div>
+          <p id="modal-review-count">(3 reviews)</p>
+        </div>
+        <div class="rating-bars">
+          <div>5★ <div class="bar"><div id="bar-5"></div></div></div>
+          <div>4★ <div class="bar"><div id="bar-4"></div></div></div>
+          <div>3★ <div class="bar"><div id="bar-3"></div></div></div>
+          <div>2★ <div class="bar"><div id="bar-2"></div></div></div>
+          <div>1★ <div class="bar"><div id="bar-1"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="review-filters">
+        <span>Filter:</span>
+        <button class="filter-btn active" data-star="all">All</button>
+        <button class="filter-btn" data-star="5">5★</button>
+        <button class="filter-btn" data-star="4">4★</button>
+        <button class="filter-btn" data-star="3">3★</button>
+        <button class="filter-btn" data-star="2">2★</button>
+        <button class="filter-btn" data-star="1">1★</button>
+      </div>
+
+      <!-- Reviews List -->
+      <div class="reviews-list"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="/JS/main.js"></script>
+</body>
+</html>
